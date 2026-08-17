@@ -1,7 +1,8 @@
+import type { MutableRefObject } from 'react';
 import { useContainerSize } from './useContainerSize';
 
 export interface FittedTiles {
-  ref: ReturnType<typeof useContainerSize>['ref'];
+  ref: MutableRefObject<HTMLDivElement | null>;
   /** Pixel size of one tile so a whole tile always lands at the left, top and right edges. */
   tilePx: number;
 }
